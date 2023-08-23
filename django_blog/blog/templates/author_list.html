@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %} {% block content %}
+<h1>All Authors</h1>
+<ul>
+  {% for obj in object_list%}
+  <li>
+    <a href="{{obj.get_absolute_url}}">{{obj.first_name}} {{obj.last_name}}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
